@@ -1,7 +1,7 @@
 import React from "react";
 import CarouselMovie from "./components/CarouselMovie";
 import ListMovie from "./components/ListMovie";
-import Section from "../../HOC/section";
+// import Section from "../../HOC/Section";
 import { useMediaQuery } from "react-responsive";
 
 const HomePage = () => {

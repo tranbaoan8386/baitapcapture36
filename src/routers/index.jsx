@@ -8,7 +8,7 @@ import RegisterPage from "../pages/register";
 import AuthCheck, { roleUser } from "../HOC/AuthCheck";
 import UserInfoPage from "../pages/info-user";
 import AdminTemplate from "../templates/AdminTemplate";
-import AdminHomePage from "../pages/admin/home";
+import AdminHomePage from "../pages/Admin/home/index";
 import MovieAdminPage from "../pages/Admin/movie";
 
 const routers = [

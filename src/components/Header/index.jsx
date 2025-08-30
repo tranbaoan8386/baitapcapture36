@@ -6,13 +6,19 @@ const HeaderPage = () => {
   const { isDesktop, isTablet, isMobile } = useResponsive();
 
   return (
-    <div className="px-14 py-6 bg-yellow-700 flex justify-between">
-      <div className="text-zinc-400 text-2xl font-bold">BC85 MOVIE</div>
+    <header className="bg-white shadow-md sticky top-0 z-50">
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <div className="text-orange-500 text-2xl font-extrabold cursor-pointer">
+          BC85 MOVIE
+        </div>
 
-      {isDesktop && <NavBarDesktopTablet />}
-      {isTablet && <NavBarDesktopTablet />}
-      {isMobile && <NavBarMobile />}
-    </div>
+        {/* Nav */}
+        {isDesktop && <NavBarDesktopTablet />}
+        {isTablet && <NavBarDesktopTablet />}
+        {isMobile && <NavBarMobile />}
+      </div>
+    </header>
   );
 };
 

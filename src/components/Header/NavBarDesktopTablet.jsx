@@ -6,48 +6,68 @@ import { setLogoutAction } from "../../stores/user";
 const NavBarDesktopTablet = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const { infoUser } = useSelector((state) => state.userSlice);
 
   const handleLogout = () => {
     dispatch(setLogoutAction());
   };
 
+  const menuItems = [
+    { label: "Trang chủ", path: "/" },
+    { label: "Phim", path: "/movies" },
+    { label: "Rạp", path: "/cinemas" },
+    { label: "Ưu đãi", path: "/promotions" },
+    { label: "Tin tức", path: "/news" },
+  ];
+
   return (
-    <div>
+    <nav className="flex items-center gap-8">
+      {/* Menu */}
+      <ul className="flex items-center gap-6 text-gray-700 font-medium">
+        {menuItems.map((item, idx) => (
+          <li
+            key={idx}
+            onClick={() => navigate(item.path)}
+            className="cursor-pointer hover:text-orange-500 transition"
+          >
+            {item.label}
+          </li>
+        ))}
+      </ul>
+
+      {/* User */}
       {infoUser ? (
-        <div className="text-white">
-          <button className="cursor-pointer" onClick={() => navigate("/info")}>
+        <div className="flex items-center gap-3">
+          <span
+            className="cursor-pointer font-semibold text-gray-800"
+            onClick={() => navigate("/info")}
+          >
             {infoUser?.hoTen}
-          </button>
+          </span>
           <button
             onClick={handleLogout}
-            className="bg-purple-400 px-2 py-1 rounded ml-2"
+            className="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600 transition"
           >
             Đăng xuất
           </button>
         </div>
       ) : (
-        <div className="text-white">
+        <div className="flex items-center gap-3">
           <button
-            onClick={() => {
-              navigate("/login");
-            }}
-            className="px-2 py-1 rounded bg-purple-400 "
+            onClick={() => navigate("/login")}
+            className="px-3 py-1 rounded-lg bg-orange-500 text-white hover:bg-orange-600 transition"
           >
             Đăng nhập
           </button>
           <button
-            onClick={() => {
-              navigate("/register");
-            }}
-            className="ml-2 px-2 py-1 rounded bg-white text-black"
+            onClick={() => navigate("/register")}
+            className="px-3 py-1 rounded-lg bg-gray-100 border hover:bg-gray-200 transition"
           >
             Đăng ký
           </button>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 

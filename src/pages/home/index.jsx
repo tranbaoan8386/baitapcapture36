@@ -3,6 +3,7 @@ import CarouselMovie from "./components/CarouselMovie";
 import ListMovie from "./components/ListMovie";
 import Section from "../../HOC/Section";
 import { useMediaQuery } from "react-responsive";
+import News from "./components/News";
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState("nowShowing"); // nowShowing | comingSoon
@@ -19,40 +20,28 @@ const HomePage = () => {
       </div>
 
       {/* Tabs phim */}
-      <Section titleSection="🎬 Danh sách phim">
-        <div className="container mx-auto px-4">
-          {/* Tabs */}
-          <div className="flex justify-center mb-6">
-            <button
-              onClick={() => setActiveTab("nowShowing")}
-              className={`px-6 py-2 font-semibold rounded-l-lg ${
-                activeTab === "nowShowing"
-                  ? "bg-red-600 text-white"
-                  : "bg-white text-gray-700 border"
-              }`}
-            >
-              🎥 Đang chiếu
-            </button>
-            <button
-              onClick={() => setActiveTab("comingSoon")}
-              className={`px-6 py-2 font-semibold rounded-r-lg ${
-                activeTab === "comingSoon"
-                  ? "bg-red-600 text-white"
-                  : "bg-white text-gray-700 border"
-              }`}
-            >
-              🚀 Sắp chiếu
-            </button>
+      <Section titleSection="Danh sách phim">
+        <div
+          className="relative py-12  "
+          style={{
+            backgroundImage:
+              "url(https://demo1.cybersoft.edu.vn/static/media/backapp.b46ef3a1.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            backdropFilter: "blur(5px)",
+          }}
+        >
+          {/* Nội dung */}
+          <div className="relative container mx-auto px-4">
+            <ListMovie />
           </div>
-
-          {/* Danh sách phim */}
-          {activeTab === "nowShowing" ? (
-            <ListMovie category="nowShowing" />
-          ) : (
-            <ListMovie category="comingSoon" />
-          )}
         </div>
       </Section>
+      <div>
+        <News></News>
+      </div>
     </div>
   );
 };

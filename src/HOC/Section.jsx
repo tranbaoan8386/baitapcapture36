@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 const Section = ({ children, titleSection }) => {
   return (
     <div className="mt-12">
-      <h3 className="text-3xl font-bold text-center">{titleSection}</h3>
+      <h3 className="text-5xl font-bold text-center">{titleSection}</h3>
 
       {children}
     </div>

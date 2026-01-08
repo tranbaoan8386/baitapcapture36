@@ -14,10 +14,11 @@ const NavBarDesktopTablet = () => {
 
   const menuItems = [
     { label: "Trang chủ", path: "/" },
-    { label: "Phim", path: "/movies" },
-    { label: "Rạp", path: "/cinemas" },
-    { label: "Ưu đãi", path: "/promotions" },
-    { label: "Tin tức", path: "/news" },
+
+    // { label: "Phim", path: "/movies" },
+    // { label: "Rạp", path: "/cinemas" },
+    // { label: "Ưu đãi", path: "/promotions" },
+    // { label: "Tin tức", path: "/news" },
   ];
 
   return (
@@ -34,6 +35,16 @@ const NavBarDesktopTablet = () => {
           </li>
         ))}
       </ul>
+      <div className="text-sm text-gray-600">
+        <p>
+          <span className="font-semibold text-black">Admin:</span> TK: baoan |
+          MK: 123456
+        </p>
+        <p>
+          <span className="font-semibold text-black">User:</span> TK: baoan12 |
+          MK: 123456
+        </p>
+      </div>
 
       {/* User */}
       {infoUser ? (

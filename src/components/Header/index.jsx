@@ -10,7 +10,7 @@ const HeaderPage = () => {
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="text-orange-500 text-2xl font-extrabold cursor-pointer">
-          BC85 MOVIE
+          BA MOVIE
         </div>
 
         {/* Nav */}

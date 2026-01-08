@@ -52,9 +52,9 @@ const CarouselMovie = () => {
   const getStyle = (index) => {
     if (index === active) return "scale-100 opacity-100 z-20";
     if (index === (active + 1) % images.length)
-      return "translate-x-[40%] scale-95 opacity-60 z-10";
+      return "translate-x-[20%] sm:translate-x-[30%] lg:translate-x-[40%] scale-95 opacity-60 z-10";
     if (index === (active - 1 + images.length) % images.length)
-      return "translate-x-[-40%] scale-95 opacity-60 z-10";
+      return "-translate-x-[20%] sm:-translate-x-[30%] lg:-translate-x-[40%] scale-95 opacity-60 z-10";
     return "opacity-0 scale-90";
   };
 
@@ -66,7 +66,7 @@ const CarouselMovie = () => {
                   sm:h-[360px] 
                   md:h-[500px] 
                   lg:h-[650px] 
-                  xl:h-[850px]
+                  xl:h-[750px]
                   flex items-center justify-center 
                   overflow-hidden cursor-grab"
         onMouseDown={onMouseDown}
@@ -84,7 +84,14 @@ const CarouselMovie = () => {
             <img
               src={img}
               draggable={false}
-              className="w-full aspect-[21/9] object-cover rounded-xl shadow-xl select-none"
+              className="  w-full 
+                            aspect-[16/9] 
+                            sm:aspect-[18/9] 
+                            lg:aspect-[21/9]
+                            object-cover 
+                            rounded-xl 
+                            shadow-xl 
+                            select-none"
               alt={`Banner ${index}`}
             />
           </div>

@@ -61,7 +61,14 @@ const CarouselMovie = () => {
   return (
     <div className="w-full max-w-8xl mx-auto px-4">
       <div
-        className="relative h-[850px] flex items-center justify-center overflow-hidden cursor-grab"
+        className="  relative 
+                  h-[260px] 
+                  sm:h-[360px] 
+                  md:h-[500px] 
+                  lg:h-[650px] 
+                  xl:h-[850px]
+                  flex items-center justify-center 
+                  overflow-hidden cursor-grab"
         onMouseDown={onMouseDown}
         onMouseUp={onMouseUp}
         onTouchStart={onTouchStart}

@@ -3,7 +3,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const images = [
-  "https://collider.com/wp-content/uploads/the-avengers-movie-poster-banners-03.jpg",
   "https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2024/8/10/100-2024-1080p-hd-q7ljjnunwqtovkjeiffmtreg7k2-17228436596321407572541-read-only-17232582798341385239489-45-0-1050-1920-crop-17232588361821879867918.jpg",
   "https://snworksceo.imgix.net/ame-egl/71b1929c-0c30-475b-9287-c2adec9fb164.sized-1000x1000.jpeg?w=800&dpr=2&ar=16%3A9&fit=crop&crop=faces",
   "https://cdn2.tuoitre.vn/thumb_w/480/471584752817336320/2025/11/18/faej3kj61920x1080-conan-nangdau-notitle1267712-17634307144031318908548.jpeg",
@@ -78,7 +77,7 @@ const CarouselMovie = () => {
           <div
             key={index}
             className={`absolute w-full max-w-7xl  transition-all duration-500 ease-in-out ${getStyle(
-              index
+              index,
             )}`}
           >
             <img

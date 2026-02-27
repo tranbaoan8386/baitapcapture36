@@ -13,26 +13,32 @@ const HomePage = () => {
   const isMobile = useMediaQuery({ maxWidth: 639 });
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div
+      className="relative py-12  "
+      style={{
+        backgroundImage:
+          "url(https://demo1.cybersoft.edu.vn/static/media/backapp.b46ef3a1.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backdropFilter: "blur(5px)",
+      }}
+    >
       {/* Carousel - Banner phim */}
       <div className="mb-8">
         <CarouselMovie />
       </div>
 
       {/* Tabs phim */}
-      <Section titleSection="Danh sách phim">
-        <div
-          className="relative py-12  "
-          style={{
-            backgroundImage:
-              "url(https://demo1.cybersoft.edu.vn/static/media/backapp.b46ef3a1.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
-            backdropFilter: "blur(5px)",
-          }}
-        >
+      <Section>
+        <h2 className="text-3xl md:text-4xl font-bold text-center relative ">
+          <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+            Danh sách phim
+          </span>
+          <div className="h-1 w-24 bg-orange-500 mx-auto mt-3 rounded-full"></div>
+        </h2>
+        <div>
           {/* Nội dung */}
           <div className="relative container mx-auto px-4">
             <ListMovie />

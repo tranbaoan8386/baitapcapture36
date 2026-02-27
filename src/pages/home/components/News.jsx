@@ -49,9 +49,14 @@ const News = () => {
   return (
     <div className=" min-h-screen text-white">
       {/* 🔥 TIÊU ĐỀ */}
-      <div className="text-center py-12">
-        <h1 className="text-4xl font-bold mb-2 text-neutral-950 ">Tin Tức</h1>
-        <p className="text-gray-400 text-xl">
+      <div className="text-center py-16">
+        <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+          Tin Tức
+        </h1>
+
+        <div className="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+
+        <p className="text-gray-500 text-lg md:text-xl mt-6">
           Cập nhật những thông tin điện ảnh mới nhất
         </p>
       </div>

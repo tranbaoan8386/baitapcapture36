@@ -4,49 +4,56 @@ const FooterPage = () => {
   const { isDesktop, isTablet, isMobile } = useResponsive();
 
   return (
-    <footer className="bg-gray-900 text-white shadow-inner mt-10">
-      <div className="container mx-auto px-6 py-8 grid gap-6 md:grid-cols-3">
-        {/* Cột 1: Logo & giới thiệu */}
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-white  ">
+      <div className="container mx-auto px-6 py-14 grid gap-10 md:grid-cols-3">
+        {/* Cột 1 */}
         <div>
-          <h2 className="text-orange-500 text-2xl font-extrabold mb-3 cursor-pointer">
+          <h2 className="text-2xl font-extrabold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-4 cursor-pointer tracking-wide">
             BC85 MOVIE
           </h2>
-          <p className="text-sm text-gray-400">
+
+          <p className="text-gray-400 leading-relaxed">
             Nền tảng xem phim trực tuyến chất lượng cao. Trải nghiệm điện ảnh
             mọi lúc, mọi nơi.
           </p>
         </div>
 
-        {/* Cột 2: Link nhanh */}
+        {/* Cột 2 */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Liên kết nhanh</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li className="hover:text-orange-500 cursor-pointer">Trang chủ</li>
-            <li className="hover:text-orange-500 cursor-pointer">
-              Phim đang chiếu
-            </li>
-            <li className="hover:text-orange-500 cursor-pointer">
-              Phim sắp chiếu
-            </li>
-            <li className="hover:text-orange-500 cursor-pointer">Liên hệ</li>
+          <h3 className="text-lg font-semibold mb-4 text-white">
+            Liên kết nhanh
+          </h3>
+
+          <ul className="space-y-3 text-gray-400">
+            {["Trang chủ", "Phim đang chiếu", "Phim sắp chiếu", "Liên hệ"].map(
+              (item, index) => (
+                <li
+                  key={index}
+                  className="cursor-pointer transition-all duration-300 hover:text-orange-500 hover:translate-x-1"
+                >
+                  {item}
+                </li>
+              ),
+            )}
           </ul>
         </div>
 
-        {/* Cột 3: Thông tin liên hệ */}
+        {/* Cột 3 */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Liên hệ</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li>Email: support@bc85movie.com</li>
+          <h3 className="text-lg font-semibold mb-4 text-white">Liên hệ</h3>
+
+          <ul className="space-y-3 text-gray-400">
+            <li>Email: tranbaoan@gmail.com</li>
             <li>Điện thoại: 0123-456-789</li>
-            <li>Địa chỉ: Hà Nội, Việt Nam</li>
+            <li>Địa chỉ: Tp. HCM, Việt Nam</li>
           </ul>
         </div>
       </div>
 
-      {/* Footer bottom */}
-      <div className="border-t border-gray-700 mt-6">
-        <p className="text-center text-gray-500 text-sm py-4">
-          © {new Date().getFullYear()} BC85 MOVIE. All rights reserved.
+      {/* Bottom */}
+      <div className="border-t border-white/10">
+        <p className="text-center text-gray-500 text-sm py-6">
+          © {new Date().getFullYear()} BA MOVIE. All rights reserved.
         </p>
       </div>
     </footer>
